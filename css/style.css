@@ -1,0 +1,237 @@
+/*Estilo cuerpo del documento*/
+body{
+	font-family: "Gabriola";
+	background-image: url(../img/fondo1.jpg);
+	background-size: contain;
+}
+/*Estilo del menu*/
+header{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	align-items: center;
+	background-color: #000;
+	height: 3em;
+
+}
+.menu{
+	margin-left: 20em;
+	font-size: 1.5em;
+}
+.menu ul li{
+	display: inline;
+	margin: 0 1em 0 0;
+}
+.menu ul li a{
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out 0.1s;
+}
+.menu ul li a:hover{
+	color: #04B4AE;
+}
+.menu ul li a:visited{
+	text-decoration: none;
+}
+/*Linea azul debajo del menu*/
+.marquilla{
+	order: 3;
+	width: 100%;
+	height: 0.5em;
+	background-color: #04B4AE; 
+}
+/*Estilo del titulo*/
+.titulo{
+	margin-left: 1em;
+}
+
+.titulo h1 a{
+	color: #fff;
+	text-decoration: none;
+}
+.titulo h1 a:visited{
+	text-decoration: none;
+}
+/*Estilo de la caja contenedora*/
+.contenedor{
+	height: 37em;
+	width: 100%;
+}
+/*Estilo de la caja contenido*/
+.contenido{
+	height: 32em;
+	width: 100%;
+}
+/*Estilo del pie de página*/
+footer{
+	height: 4em;
+	width: 100%;
+	background-color: #04B4AE;
+}
+footer div{
+	height: 3em;
+	width: 80%;
+	position: absolute;
+	margin-top: 0.4em;
+	margin-left: 7em;
+	background-color: #000;
+}
+footer div p{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 2em;
+	margin-top: 0.5em;
+	color: #04B4AE;
+}
+/*Estilo de la caja flotante del inicio 1 y 2*/
+.float1{
+	width: 45%;
+	float: left;
+}
+.float2{
+	width: 45%;
+	float: left;
+}
+.float2 h1{
+	text-align: center;
+	text-shadow: 2px 2px 5px #292A0A;
+}
+.float2 p{
+	text-align: justify;
+	font-size: 1.3em;
+	text-shadow: 2px 2px 5px #151515;
+}
+/*Estilo de la foto*/
+img{
+	height: 12em;
+	width: 10em;
+	border-radius: 30em;
+	box-shadow: 10px 10px 20px #585858;
+	margin-left: 12em;
+	margin-top: 8em;
+}
+/*estilo de la caja flotante del interes 4 y 5*/
+.float3{
+	width: 45%;
+	margin-left: 7.5em;
+	float: left;
+}
+.float4{
+	width: 45%;
+	float: left;
+}
+/*Estilo del titulo del interes*/
+#acerca h1{
+	text-align: center;
+	text-shadow: 2px 2px 5px #292A0A;
+}
+/*Estilo de los parrafos de la caja interes*/
+#acerca div p{
+	text-align: justify;
+	font-size: 1.3em;
+	text-shadow: 2px 2px 5px #151515;
+}
+#acerca div ul li{
+	text-align: justify;
+	font-size: 1.3em;
+	text-shadow: 2px 2px 5px #151515;
+}
+/*Estilo de las cajas flotantes del contacto*/
+.float5{
+	width: 35%;
+	float: left;
+}
+.float6{
+	width: 55%;
+	float: left;
+}
+/*Estilo del titulo de contacto*/
+#contacto h1{
+	text-align: center;
+	text-shadow: 2px 2px 5px #292A0A;
+}
+/*Estilo de la lista de la caja contacto*/
+.float5 ul li{
+	text-align: justify;
+	font-size: 1.3em;
+	list-style-type: none;
+}
+.float5 ul li a{
+	color: #000;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out 0.1s;
+}
+.float5 ul li a:hover{
+	color: #01A9DB;
+}
+.float5 ul li a:visited{
+	text-decoration: none;
+}
+/*Estilo de la tabla de contacto*/
+table td{
+	font-size: 1.3em;
+	text-shadow: 2px 2px 5px #151515;
+}
+/*Estilo de los inputs de contacto*/
+input[type="text"],input[type="date"],input[type="email"]{
+	height: 1.5em;
+	width: 10em;
+	padding-left: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	font-family: "Gabriola";
+	font-size: 1em;
+}
+/*Estilo del textarea del comentario de contacto*/
+textarea{
+	padding-left: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	font-family: "Gabriola";
+	font-size: 1em;
+}
+/*Estilo de los iconos del menu*/
+.menu-icon {
+	font-size: 15px;
+	width: 15px;
+	color: #fff;
+	padding-right: 12px;
+}
+/*Estilo del icono de facebook*/
+.menu-face {
+	font-size: 15px;
+	width: 15px;
+	color: #045FB4;
+	padding-right: 12px;
+}
+/*Estilo del icono twitter*/
+.menu-twit {
+	font-size: 15px;
+	width: 15px;
+	color: #01A9DB;
+	padding-right: 12px;
+}
+/*Estilo del icono youtube*/
+.menu-you {
+	font-size: 15px;
+	width: 15px;
+	color: #DF0101;
+	padding-right: 12px;
+}
+/*Estilo del icono github*/
+.menu-web {
+	font-size: 15px;
+	width: 15px;
+	color: #5F04B4;
+	padding-right: 12px;
+}
+/*Estilo del icono teléfono*/
+.menu-mobile {
+	font-size: 15px;
+	width: 15px;
+	color: #04B4AE;
+	padding-right: 12px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ivan Benavides</title> <!-- Título de la página -->
+	<link rel="stylesheet" href="css/style.css"/> <!-- Se enlaza la hoja de estilos de la página -->
+	<link rel="stylesheet" href="css/font-awesome.css"/> <!-- Se enlaza la hoja de estilos de los iconos, se descargo de Font Awesome Icons -->
+	<link rel="icon" type="image/png" href="img/ico.png" /> <!-- Se coloca el icono de la pagina -->
+</head>
+<!-- Se colocan tags para escribir código JS -->
+<script type="text/javascript"> 
+	function mostrarinicio(id,id1,id2){ //Función en JavaScript que recibe tres parametros y sirve para mostrar o ocultar los divs
+		var id = document.getElementById(id); //Se obtine el id del div 0 y se lo almacena en una variable definida en esta misma linea
+		var id1 = document.getElementById(id1); //Se obtine el id del div 1 y se lo almacena en una variable definida en esta misma linea
+		var id2 = document.getElementById(id2); //Se obtine el id del div 2 y se lo almacena en una variable definida en esta misma linea
+		if(id){ //Se verifica que el id 0 venga lleno
+			id.style.display = (id.style.display=='none') ? 'block':'block'; //Se le asigna el valor que traiga el div 0 dependiendo del resultado del operador ternario
+			id1.style.display='none'; //Se oculta el div 1
+			id2.style.display='none'; //Se oculta el div 2
+		}
+	}
+</script>
+<body>
+	<header>
+		<div class="titulo"> 
+			<h1><a target="_blank" href="https://www.facebook.com/profile.php?id=100008324470877">Iv&aacute;n Dar&iacute;o Benavides Pach&oacute;n</a></h1> <!-- Se define un link que abre la pagina principal de facebook -->
+		</div>
+		<div class="menu"> <!-- Caja de texto que contiene el menu principal, cada enlace pide que se ejecute la funcion en JS para mostrar u ocultar divs y dentro de esta se envia los tres parametros osea los id de las cajas-->
+			<center>
+				<ul>
+					<li><a href="#" onclick="mostrarinicio('inicio','acerca','contacto');" ><i class="menu-icon fa fa-home"></i>Inicio</a></li> 
+					<li><a href="#" onclick="mostrarinicio('acerca','inicio','contacto');" ><i class="menu-icon fa fa-heart-o"></i>Intereses</a></li>
+					<li><a href="#" onclick="mostrarinicio('contacto','inicio','acerca');" ><i class="menu-icon fa fa-envelope-o"></i>Contacto</a></li>
+				</ul>
+			</center>
+		</div>
+	</header>
+	<div class="marquilla"></div> <!-- Con esta caja se coloca una linea de color verde debajo del menu -->
+	<div class="contenedor">
+		<div class="contenido">
+			<div id="inicio" style="display: block;" > <!-- Se define una caja para que cuando se abra la pagina sea la primera que se muestre -->
+				<div class="float1">
+					<img src="img/ivan1.jpg" alt="Ivan"> <!-- Se inserta la foto -->
+				</div>
+				<div class="float2">
+					<h1 class="biografia">Iv&aacute;n Dar&iacute;o Benavides Pach&oacute;n</h1> <!-- Título del inicio -->
+					<p> <!-- Párrafos del incio -->
+						Soy estudiante de Ingenier&iacute;a de Sistemas de la Universidad de Cundinamarca. Tecnol&oacute;go en An&aacute;lisis y Desarrollo de Sistemas de Informaci&oacute;n y T&eacute;cnico Ocupacional en Conocimientos de la Lengua Inglesa.
+					</p>
+					<p>
+						Nac&iacute; un 02 de Octubre de 1990 en la ciudad de Puerto Asis, Putumayo. Desde muy niño desarroll&eacute; el gusto por la tecnolog&iacute;a. Mis padres son el Sr. Ernesto Benavides y la Sra. Emelina Cabiche. Soy el mayor de 3 hermanos. Me cas&eacute; con la docente en pedagog&iacute;a Maria Alejandra Gaona y tuve dos hijos, Johan Esteban y Sara Valentina.
+					</p>
+				</div>
+			</div>
+			<div id="acerca" style="display: none;" > <!-- Se definine una caja oculta para que funcione con el menu y la funcioN JS -->
+				<h1 class="interes">Mis intereses</h1> <!-- Título del enlaces intereses -->
+				<div class="float3">
+					<p>
+						Las actividades que m&aacute; llaman mi atenci&oaute;n son:
+					</p>
+					<ul> <!-- Se define una listas ordenada --> 
+						<li>Salir de paseo con mi familia</li>
+						<li>Jugar microfutbol</li>
+						<li>Nadar en rios correntosos</li>
+						<li>Aprender nuevos lenguajes de programaci&oacute;n</li>
+						<li>Escuchar musica mientras programo</li>
+					</ul>
+				</div>
+				<div class="float4">
+					<p>Me gustar&iacute;a hacer lo siguiente:</p>
+					<ul> <!-- Se define una listas ordenada --> 
+						<li>Conformar mi propia empresa</li>
+						<li>Estudiar Medicina y especializarme en Cardiolog&iacute;a o en Pediatr&iacute;a</li>
+						<li>Viajar por todo el mundo</li>
+						<li>En fin me gustaria hacer muchas cosas espero me alcance el tiempo...</li>
+					</ul>
+				</div>
+			</div>
+			<div id="contacto" style="display: none;" > <!-- Se define una caja oculta para que funcione con el menu y la funcioN JS -->
+				<h1 class="contact">Env&iacute;eme sus comentarios</h1> <!-- Título del enlace contacto -->
+				<div class="float5">
+					<ul> <!-- A continuación se colocan enlaces a cada una de las redes sociales -->
+						<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100008324470877"><i class="menu-face fa fa-facebook-square"></i>Env&iacute;eme un mensaje</a></li>
+						<li><a target="_blank" href="https://www.twitter.com"><i class="menu-twit fa fa-twitter-square"></i>Siguirme en twitter</a></li>
+						<li><a target="_blank" href="https://www.youtube.com"><i class="menu-you fa fa-youtube-play"></i>Pariticipe en mi canal</a></li>
+						<li><a target="_blank" href="https://www.github.com"><i class="menu-web fa fa-github"></i>P&aacute;gina de grupo</a></li>
+						<li><a traget="_blank" href="https://www.skype.com"><i class="menu-mobile fa fa-mobile"></i>+57 322 360 1512</a></li>
+					</ul>
+				</div>
+				<div class="float6">
+					<form method="post" action=""> <!-- Se define un formulario de tipo post para el envio de comentarios -->
+						<table> <!-- Se define una tabla para mostrar de forma organizada el formulario -->
+							<tr>
+								<td>Nombre:</td>
+								<td><input type="text" placeholder="Ingrese su nombre"></td> <!-- Entrada de tipo texto  -->
+								<td>Apellido:</td>
+								<td><input type="text" placeholder="Ingrese su apellido"></td> <!-- Entrada de tipo texto  -->
+							</tr>
+							<tr>
+								<td>Email</td>
+								<td><input type="email" placeholder="Ingrese su correo"></td> <!-- Entrada de tipo email  -->
+								<td>Fecha de nacimiento:</td>
+								<td><input type="date" placeholder="Ingrese su fecha de nacimiento"></td> <!-- Entrada de tipo date  -->
+							</tr>
+							<tr>
+								<td>Asunto</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<textarea name="" id="" cols="80" rows="5"></textarea>  <!-- Se define un área de texto de multiples líneas  -->
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer> <!-- Pie de página -->
+			<center>
+				<div>
+					<p style="text-align: left;">&copy; 2016 por Ivan Benavides</p>
+				</div>
+			</footer>
+		</center>
+	</div>
+</body>
+</html>
