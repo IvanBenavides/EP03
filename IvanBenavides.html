@@ -2,24 +2,12 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width"/>
 	<title>Ivan Benavides</title> <!-- Título de la página -->
 	<link rel="stylesheet" href="css/style.css"/> <!-- Se enlaza la hoja de estilos de la página -->
 	<link rel="stylesheet" href="css/font-awesome.css"/> <!-- Se enlaza la hoja de estilos de los iconos, se descargo de Font Awesome Icons -->
 	<link rel="icon" type="image/png" href="img/ico.png" /> <!-- Se coloca el icono de la pagina -->
 </head>
-<!-- Se colocan tags para escribir código JS -->
-<script type="text/javascript"> 
-	function mostrarinicio(id,id1,id2){ //Función en JavaScript que recibe tres parametros y sirve para mostrar o ocultar los divs
-		var id = document.getElementById(id); //Se obtine el id del div 0 y se lo almacena en una variable definida en esta misma linea
-		var id1 = document.getElementById(id1); //Se obtine el id del div 1 y se lo almacena en una variable definida en esta misma linea
-		var id2 = document.getElementById(id2); //Se obtine el id del div 2 y se lo almacena en una variable definida en esta misma linea
-		if(id){ //Se verifica que el id 0 venga lleno
-			id.style.display = (id.style.display=='none') ? 'block':'block'; //Se le asigna el valor que traiga el div 0 dependiendo del resultado del operador ternario
-			id1.style.display='none'; //Se oculta el div 1
-			id2.style.display='none'; //Se oculta el div 2
-		}
-	}
-</script>
 <body>
 	<header>
 		<div class="titulo"> 
@@ -28,9 +16,10 @@
 		<div class="menu"> <!-- Caja de texto que contiene el menu principal, cada enlace pide que se ejecute la funcion en JS para mostrar u ocultar divs y dentro de esta se envia los tres parametros osea los id de las cajas-->
 			<center>
 				<ul>
-					<li><a href="#" onclick="mostrarinicio('inicio','acerca','contacto');" ><i class="menu-icon fa fa-home"></i>Inicio</a></li> 
-					<li><a href="#" onclick="mostrarinicio('acerca','inicio','contacto');" ><i class="menu-icon fa fa-heart-o"></i>Intereses</a></li>
-					<li><a href="#" onclick="mostrarinicio('contacto','inicio','acerca');" ><i class="menu-icon fa fa-envelope-o"></i>Contacto</a></li>
+					<li><a href="#" id="home"><i class="menu-icon fa fa-home"></i>Inicio</a></li> 
+					<li><a href="#" id="study"><i class="menu-icon fa fa-graduation-cap"></i>Estudios</a></li>
+					<li><a href="#" id="likes"><i class="menu-icon fa fa-heart-o"></i>Intereses</a></li>
+					<li><a href="#" id="contactme"><i class="menu-icon fa fa-envelope-o"></i>Contacto</a></li>
 				</ul>
 			</center>
 		</div>
@@ -38,25 +27,70 @@
 	<div class="marquilla"></div> <!-- Con esta caja se coloca una linea de color verde debajo del menu -->
 	<div class="contenedor">
 		<div class="contenido">
-			<div id="inicio" style="display: block;" > <!-- Se define una caja para que cuando se abra la pagina sea la primera que se muestre -->
+			<div id="inicio"> <!-- Se define una caja para que cuando se abra la pagina sea la primera que se muestre -->
 				<div class="float1">
 					<img src="img/ivan1.jpg" alt="Ivan"> <!-- Se inserta la foto -->
 				</div>
 				<div class="float2">
 					<h1 class="biografia">Iv&aacute;n Dar&iacute;o Benavides Pach&oacute;n</h1> <!-- Título del inicio -->
-					<p> <!-- Párrafos del incio -->
-						Soy estudiante de Ingenier&iacute;a de Sistemas de la Universidad de Cundinamarca. Tecnol&oacute;go en An&aacute;lisis y Desarrollo de Sistemas de Informaci&oacute;n y T&eacute;cnico Ocupacional en Conocimientos de la Lengua Inglesa.
+					<p>
+						Nac&iacute; el 02 de Octubre de 1990 en la ciudad de Puerto Asis, Putumayo. Desde muy niño desarroll&eacute; el gusto por la tecnolog&iacute;a. Mis padres son el Sr. Ernesto Benavides y la Sra. Emelina Cabiche. Soy el mayor de 3 hermanos. Me cas&eacute; con Maria Alejandra Gaona, docente en pedagog&iacute;a y tuve dos hijos, Johan Esteban y Sara Valentina.
 					</p>
 					<p>
-						Nac&iacute; un 02 de Octubre de 1990 en la ciudad de Puerto Asis, Putumayo. Desde muy niño desarroll&eacute; el gusto por la tecnolog&iacute;a. Mis padres son el Sr. Ernesto Benavides y la Sra. Emelina Cabiche. Soy el mayor de 3 hermanos. Me cas&eacute; con la docente en pedagog&iacute;a Maria Alejandra Gaona y tuve dos hijos, Johan Esteban y Sara Valentina.
+						Soy un estudiante de Ingenier&iacute;a de Sistemas altamente responsable, creativo, con iniciativa y puntualidad, asumo con responsabilidad los retos y metas que la organizaci&oacute;n me plantee; adaptabilidad al cambio, manejo de personal, facilidad para trabajar en equipo, en condiciones de alta presi&oacute;n, as&iacute; como para resolver problemas eficientemente y lograr las metas de productividad trazadas por la empresa y mi grupo de trabajo.
 					</p>
 				</div>
 			</div>
+
+			<div id="academico" style="display: none;" > <!-- Se define una caja oculta para que funcione con el menu y la funcioN JS -->
+				<h1>Formaci&oacute;n acad&eacute;mica</h1> <!-- Título del enlace contacto -->
+				<div id="tabint" align="center">
+					<table>
+						<tr>
+							<th>Nivel acad&eacute;mico</th>
+							<th>T&iacute;tulo</th>
+							<th>Instituci&oacute;n</th>
+							<th>A&ntilde;o de finalizaci&oacute;n</th>
+						</tr>
+						<tr>
+							<td>Profesional</td>
+							<td>Ingeniero de Sistemas</td>
+							<td>Universidad de Cundinamarca</td>
+							<td>En curso</td>
+						</tr>
+						<tr>
+							<td>Tecn&oacute;logo</td>
+							<td>An&aacute;lista y Desarrollador de Sistemas de Informaci&oacute;n</td>
+							<td>SENA</td>
+							<td>2015</td>
+						</tr>
+						<tr>
+							<td>T&eacute;cnico</td>
+							<td>T. Ocupacional en Conocimientos Acad&eacute;micos de la Lengua Inglesa.</td>
+							<td>Centro Electr&oacute;nico de Idiomas</td>
+							<td>2009</td>
+						</tr>
+						<tr>
+							<td>Diplomado</td>
+							<td>Tecnolog&iacute;a e Inform&aacute;tica</td>
+							<td>Escuela de Inform&aacute;tica</td>
+							<td>2007</td>
+						</tr>
+						<tr>
+							<td>Bachiller</td>
+							<td>Bachiller Acad&eacute;mico</td>
+							<td>Escuela de Inform&aacute;tica</td>
+							<td>2008</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
 			<div id="acerca" style="display: none;" > <!-- Se definine una caja oculta para que funcione con el menu y la funcioN JS -->
 				<h1 class="interes">Mis intereses</h1> <!-- Título del enlaces intereses -->
 				<div class="float3">
 					<p>
-						Las actividades que m&aacute; llaman mi atenci&oaute;n son:
+						Las actividades que m&aacute;s llaman mi atenci&oacute;n son:
 					</p>
 					<ul> <!-- Se define una listas ordenada --> 
 						<li>Salir de paseo con mi familia</li>
@@ -123,5 +157,8 @@
 			</footer>
 		</center>
 	</div>
+	<script type="text/javascript" src="js/sweetalert-dev.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

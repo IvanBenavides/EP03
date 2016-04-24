@@ -61,8 +61,11 @@ header{
 }
 /*Estilo de la caja contenido*/
 .contenido{
-	height: 32em;
+	height: 90%;
 	width: 100%;
+}
+#inicio p{
+	font-size: 1.3em;
 }
 /*Estilo del pie de página*/
 footer{
@@ -97,12 +100,12 @@ footer div p{
 }
 .float2 h1{
 	text-align: center;
-	text-shadow: 2px 2px 5px #292A0A;
+	/*text-shadow: 2px 2px 5px #292A0A;*/
 }
 .float2 p{
 	text-align: justify;
 	font-size: 1.3em;
-	text-shadow: 2px 2px 5px #151515;
+	/*text-shadow: 2px 2px 5px #151515;*/
 }
 /*Estilo de la foto*/
 img{
@@ -112,6 +115,51 @@ img{
 	box-shadow: 10px 10px 20px #585858;
 	margin-left: 12em;
 	margin-top: 8em;
+}
+/*Estudios*/
+#academico{
+	text-align: center;
+}
+/*tabla*/
+#tabint{
+	margin-top: 2em;
+}
+#tabint table{
+	width: 70%;
+	background-size: cover;
+	border-radius: 0px;
+	border: solid 1px #238276;
+	box-shadow: 0 0 10px #333;
+	margin: 10px;
+}
+
+#tabint table tbody tr td,#tabint table tbody tr th{
+	transition: all 400ms ease-in;
+	-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	-o-transition: all 400ms ease-in;
+	-ms-transition: all 400ms ease-in;
+	text-align: center;
+	word-wrap: break-word;
+	border: solid 0px #fff;
+	border-bottom: solid 1px #fff;
+	border-top: solid 1px #f1f1f1;
+	border-right: solid 1px #f1f1f1;
+}
+#tabint table tbody tr td:nth-child(odd){
+	background-color: #fff;
+}
+#tabint table tbody tr td:nth-child(even){
+	background-color: #fafafa;
+}
+#tabint table tbody tr:hover td:nth-child(odd),
+#tabint table tbody tr:hover td:nth-child(even){
+	background: #FFBB69;
+	opacity: 0.9;
+}
+th{
+	font-size: 1.2em;
+	background: #09E869;
 }
 /*estilo de la caja flotante del interes 4 y 5*/
 .float3{
@@ -126,18 +174,18 @@ img{
 /*Estilo del titulo del interes*/
 #acerca h1{
 	text-align: center;
-	text-shadow: 2px 2px 5px #292A0A;
+	/*text-shadow: 2px 2px 5px #292A0A;*/
 }
 /*Estilo de los parrafos de la caja interes*/
 #acerca div p{
 	text-align: justify;
 	font-size: 1.3em;
-	text-shadow: 2px 2px 5px #151515;
+	/*text-shadow: 2px 2px 5px #151515;*/
 }
 #acerca div ul li{
 	text-align: justify;
 	font-size: 1.3em;
-	text-shadow: 2px 2px 5px #151515;
+	/*text-shadow: 2px 2px 5px #151515;*/
 }
 /*Estilo de las cajas flotantes del contacto*/
 .float5{
@@ -151,7 +199,7 @@ img{
 /*Estilo del titulo de contacto*/
 #contacto h1{
 	text-align: center;
-	text-shadow: 2px 2px 5px #292A0A;
+	/*text-shadow: 2px 2px 5px #292A0A;*/
 }
 /*Estilo de la lista de la caja contacto*/
 .float5 ul li{
@@ -173,7 +221,7 @@ img{
 /*Estilo de la tabla de contacto*/
 table td{
 	font-size: 1.3em;
-	text-shadow: 2px 2px 5px #151515;
+	/*text-shadow: 2px 2px 5px #151515;*/
 }
 /*Estilo de los inputs de contacto*/
 input[type="text"],input[type="date"],input[type="email"]{
@@ -199,6 +247,9 @@ textarea{
 	width: 15px;
 	color: #fff;
 	padding-right: 12px;
+}
+i{
+	margin-right: .2em;
 }
 /*Estilo del icono de facebook*/
 .menu-face {
