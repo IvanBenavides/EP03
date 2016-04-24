@@ -23,16 +23,4 @@ $(document).ready(function() {
 		id3.fadeOut(100);
 		id4.fadeOut(100);
 	};
-
-// Crear color de forma aleatoria
-var randomColor = function(){
-        // from http://www.paulirish.com/2009/random-hex-color-code-snippets/
-        return '#'+(function lol(m,s,c){return s[m.floor(m.random() * s.length)] +
-        	(c && lol(m,s,c-1));})(Math,'0123456789ABCDEF',4);
-        };
-
-        
-
-
-
-    });
+ });
